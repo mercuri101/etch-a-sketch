@@ -11,10 +11,10 @@ button {
 }
 
 .field {
-  border: 1px solid black;
+  border: 5px solid black;
   margin-top: 20px;
-  width: 600px;
-  height: 600px;
+  width: 570px;
+  height: 570px;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -28,7 +28,7 @@ button {
 }
 
 .cell {
-  border: 1px solid black;
+  border: 1px solid gray;
   flex: auto;
 }
 

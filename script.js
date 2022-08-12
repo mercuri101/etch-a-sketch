@@ -7,12 +7,10 @@ const curColor = "blue";
 createGrid(16);
 newGrindButton.addEventListener("click", () => createNewGrid());
 
-// Implement hover-coloring
-
-
 
 function colorCell(cell, color) {
   cell.style.backgroundColor = color;
+  cell.style.border = `1px solid ${color}`;
 }
 
 

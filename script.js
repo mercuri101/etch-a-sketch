@@ -6,9 +6,10 @@ const drawerBtn = document.querySelector(".drawer");
 const eraserBtn = document.querySelector(".eraser");
 const clearBtn = document.querySelector(".clear");
 
-let curColor = "blue";
-let emptyCellBorder = "1px solid gray";
-let emptyCellColor = "white";
+let curColor = "black";
+
+const emptyCellBorder = "1px solid gray";
+const emptyCellColor = "white";
 
 createGrid(16);
 setupColorPalette(colors);
@@ -17,6 +18,7 @@ newGrindButton.addEventListener("click", () => createNewGrid());
 drawerBtn.addEventListener("click", () => setDrawingMode(curColor));
 eraserBtn.addEventListener("click", () => setErasingMode());
 clearBtn.addEventListener("click", () => clearField());
+colors.forEach(color => color.addEventListener("click", () => setCurColor(color)));
 
 
 function createGrid(size) {
@@ -95,6 +97,20 @@ function clearField() {
 
 function setupColorPalette(colors) {
   colors.forEach(color => color.style.backgroundColor = color.getAttribute("data-color"));
+}
+
+
+function setCurColor(color) {
+  let oldColor = document.querySelector(`.color[data-color=${curColor}]`);
+
+  oldColor.classList.remove("active");
+  oldColor.classList.add("inactive-hover");
+
+  curColor = color.getAttribute("data-color");
+  color.classList.add("active");
+  color.classList.remove("inactive-hover");
+
+  setDrawingMode(curColor);
 }
 
 

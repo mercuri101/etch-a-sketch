@@ -5,6 +5,11 @@ body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.active {
+  transform: scale(1.05);
+  box-shadow: 0 0 3px 2px gold;
+}
+
 /* Header */
 .header {
   display: flex;
@@ -63,10 +68,10 @@ body {
 }
 
 .new-grid-btn:hover,
-.drawer:hover,
-.eraser:hover,
-.color:hover,
-.random-color:hover {
+.drawer.inactive-hover:hover,
+.eraser.inactive-hover:hover,
+.color.inactive-hover:hover,
+.random-color.inactive-hover:hover {
   transform: scale(1.03);
   box-shadow: 0 0 2px black;
 }
@@ -135,7 +140,10 @@ body {
   font-size: 25px;
   cursor: default;
 }
+/* Colors */
 
+
+/* Field */
 .field {
   border: 5px solid black;
   margin-top: 20px;
@@ -154,7 +162,6 @@ body {
 }
 
 .cell {
-  border: 1px solid gray;
   flex: auto;
 }
-
+/* Field */

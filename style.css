@@ -17,26 +17,83 @@ body {
 .logo {
   font-size: 20px;
   color: darkslategray;
+  cursor: default;
 }
 
 .title {
   font-size: 35px;
   font-weight: bold;
   color: darkslategray;
+  cursor: default;
 }
 
 .source-code {
   text-decoration: none;
   color: darkslategray;
 }
+/* Header */
+
 
 .working-space {
   display: flex;
+  justify-content: space-between;
 }
 
-button {
-  width: 80px;
+
+/* Menu */
+.menu {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding-top: 30px;
+  padding-left: 20px;
+  gap: 10px;
 }
+
+.new-grid-btn,
+.drawer,
+.eraser {
+  border: 2px solid darkslategray;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.new-grid-btn:hover,
+.drawer:hover,
+.eraser:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 2px black;
+}
+
+.new-grid-btn {
+  width: 130px;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.drawer,
+.eraser {
+  border-radius: 100px;
+  width: 100px;
+  padding: 10px;
+  display: flex;
+}
+
+
+
+
+
+.colors {
+  width: 300px;
+  border: 1px solid black;
+}
+
+
 
 .field {
   border: 5px solid black;

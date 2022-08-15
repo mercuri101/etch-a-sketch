@@ -1,6 +1,6 @@
 const body = document.querySelector("body");
 const field = document.querySelector(".field");
-const newGrindButton = document.querySelector("button");
+const newGrindButton = document.querySelector(".new-grid-btn");
 
 const curColor = "blue";
 

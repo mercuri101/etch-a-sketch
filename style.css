@@ -1,9 +1,37 @@
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin: 0;
-  padding-top: 20px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkseagreen;
+  padding: 5px 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  color: darkslategray;
+}
+
+.title {
+  font-size: 35px;
+  font-weight: bold;
+  color: darkslategray;
+}
+
+.source-code {
+  text-decoration: none;
+  color: darkslategray;
+}
+
+.working-space {
+  display: flex;
 }
 
 button {

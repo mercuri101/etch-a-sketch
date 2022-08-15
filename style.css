@@ -135,10 +135,15 @@ body {
 
 .palette {
   gap: 10px;
-  width: 210px;
   padding: 15px;
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.color-row {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
 }
 
 .color {

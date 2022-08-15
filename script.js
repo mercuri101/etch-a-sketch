@@ -8,7 +8,7 @@ const clearBtn = document.querySelector(".clear");
 
 let curColor = "black";
 
-const emptyCellBorder = "1px solid gray";
+const emptyCellBorder = "1px solid rgba(80, 80, 80, 0.2)";
 const emptyCellColor = "white";
 
 createGrid(16);

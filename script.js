@@ -4,18 +4,19 @@ const newGrindButton = document.querySelector(".new-grid-btn");
 const colors = document.querySelectorAll(".color");
 const drawerBtn = document.querySelector(".drawer");
 const eraserBtn = document.querySelector(".eraser");
+const clearBtn = document.querySelector(".clear");
 
 let curColor = "blue";
 let emptyCellBorder = "1px solid gray";
 let emptyCellColor = "white";
 
 createGrid(16);
-newGrindButton.addEventListener("click", () => createNewGrid());
-
 setupColorPalette(colors);
+
+newGrindButton.addEventListener("click", () => createNewGrid());
 drawerBtn.addEventListener("click", () => setDrawingMode(curColor));
 eraserBtn.addEventListener("click", () => setErasingMode());
-
+clearBtn.addEventListener("click", () => clearField());
 
 
 function createGrid(size) {
@@ -83,6 +84,12 @@ function setErasingMode() {
   const cells = document.querySelectorAll(".cell");
   cells.forEach(cell => cell.addEventListener("mouseover", () => mouseIsDown ? eraseCell(cell) : undefined));
   cells.forEach(cell => cell.addEventListener("mousedown", () => eraseCell(cell)));
+}
+
+
+function clearField() {
+  let cells = document.querySelectorAll(".cell");
+  cells.forEach(cell => eraseCell(cell));
 }
 
 

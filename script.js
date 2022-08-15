@@ -10,6 +10,7 @@ newGrindButton.addEventListener("click", () => createNewGrid());
 
 setupColorPalette(colors);
 
+
 function colorCell(cell, color) {
   cell.style.backgroundColor = color;
   cell.style.border = `1px solid ${color}`;
@@ -49,8 +50,14 @@ function createNewGrid() {
 
 
 function addHoverColoring(color) {
+  let mouseIsDown = false;
+
+  field.addEventListener("mousedown", () => mouseIsDown = true);
+  field.addEventListener("mouseup", () => mouseIsDown = false);
+
   const cells = document.querySelectorAll(".cell");
-  cells.forEach(cell => cell.addEventListener("mouseover", () => colorCell(cell, color)));
+  cells.forEach(cell => cell.addEventListener("mouseover", () => mouseIsDown ? colorCell(cell, color) : undefined));
+  cells.forEach(cell => cell.addEventListener("mousedown", () => colorCell(cell, color)));
 }
 
 

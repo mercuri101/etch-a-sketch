@@ -1,12 +1,14 @@
 const body = document.querySelector("body");
 const field = document.querySelector(".field");
 const newGrindButton = document.querySelector(".new-grid-btn");
+const colors = document.querySelectorAll(".color");
 
 const curColor = "blue";
 
 createGrid(16);
 newGrindButton.addEventListener("click", () => createNewGrid());
 
+setupColorPalette(colors);
 
 function colorCell(cell, color) {
   cell.style.backgroundColor = color;
@@ -49,4 +51,9 @@ function createNewGrid() {
 function addHoverColoring(color) {
   const cells = document.querySelectorAll(".cell");
   cells.forEach(cell => cell.addEventListener("mouseover", () => colorCell(cell, color)));
+}
+
+
+function setupColorPalette(colors) {
+  colors.forEach(color => color.style.backgroundColor = color.getAttribute("data-color"));
 }

@@ -64,7 +64,9 @@ body {
 
 .new-grid-btn:hover,
 .drawer:hover,
-.eraser:hover {
+.eraser:hover,
+.color:hover,
+.random-color:hover {
   transform: scale(1.03);
   box-shadow: 0 0 2px black;
 }
@@ -83,17 +85,56 @@ body {
   padding: 10px;
   display: flex;
 }
+/* Menu */
 
 
-
-
-
+/* Colors */
 .colors {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   width: 300px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  padding-top: 30px;
+  padding-right: 20px;
 }
 
+.colors-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
+.palette,
+.random-color {
+  border: 2px solid darkslategray;
+  border-radius: 15px;
+}
+
+.palette {
+  gap: 10px;
+  width: 210px;
+  padding: 15px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.color {
+  border: 2px solid black;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.random-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 25px;
+  font-size: 25px;
+  cursor: default;
+}
 
 .field {
   border: 5px solid black;

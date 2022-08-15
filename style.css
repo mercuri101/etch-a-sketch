@@ -17,6 +17,7 @@ body {
   background-color: darkseagreen;
   padding: 5px 20px;
   align-items: center;
+  box-shadow: 0 1px 3px black;
 }
 
 .logo {
@@ -36,6 +37,10 @@ body {
   text-decoration: none;
   color: darkslategray;
 }
+
+.source-code:hover {
+  color: black;
+}
 /* Header */
 
 
@@ -50,7 +55,7 @@ body {
   /* border: 1px solid black; */
   display: flex;
   width: 300px;
-  padding-top: 30px;
+  padding-top: 70px;
   padding-left: 20px;
 }
 
@@ -112,11 +117,10 @@ body {
 /* Colors */
 .colors {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
   width: 300px;
   /* border: 1px solid black; */
-  padding-top: 30px;
+  padding-top: 70px;
   padding-right: 20px;
 }
 

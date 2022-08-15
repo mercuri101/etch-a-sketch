@@ -9,7 +9,7 @@ const clearBtn = document.querySelector(".clear");
 let curColor = "black";
 
 const emptyCellBorder = "1px solid rgba(80, 80, 80, 0.2)";
-const emptyCellColor = "white";
+const emptyCellColor = "whitesmoke";
 
 createGrid(16);
 setupColorPalette(colors);
